@@ -13,9 +13,9 @@ def prodjiKroz(x):
 		else:
 			cOmasaj += 1
 	if cTacno != 4:
-		return "Pogodjenih: {0}\nNa mestu nije: {1}\nDok je promaseno: {2}\n".format(cTacno, cMesto, cOmasaj)
+		return("Pogodjenih: {0}\nNa mestu nije: {1}\nDok je promaseno: {2}\n".format(cTacno, cMesto, cOmasaj))
 	else:
-		return "Svaka cast! Pogodili ste kombinaciju"
+		return("Svaka cast! Pogodili ste kombinaciju")
 
 def proveri(a, b):
 	p = [-1, -1, -1, -1]
@@ -66,7 +66,7 @@ def main():
 			print(prodjiKroz(p))
 			break
 		else:
-			print (prodjiKroz(p))
+			print(prodjiKroz(p))
 		if br == 0:
 			print("Nemate vise pokusaja")
 			print(komb)
