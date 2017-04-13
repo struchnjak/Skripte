@@ -48,10 +48,12 @@ def proveri(a, b):
 
 def main():
 	komb = [0, 0, 0, 0]
+	br = 7
 	for i in range(0, 4):
 		komb[i] = rnd(1, 7)
-	print (komb)
+	//print (komb)
 	while True:
+		br -= 1
 		inp = input("Unesite vasu kombinaciju: ")
 		inparr = []
 		inpp = int(inp)
@@ -59,15 +61,20 @@ def main():
 		inparr.append((int)((inpp / 100) % 10))
 		inparr.append((int)((inpp % 100) / 10))
 		inparr.append((int)(inpp % 10))
-		print (komb)
-		print (inparr)
 		p = proveri(inparr, komb)
-		print (p)
 		if prodjiKroz(p) == "Svaka cast! Pogodili ste kombinaciju":
 			print(prodjiKroz(p))
 			break
 		else:
 			print (prodjiKroz(p))
+		if br == 0:
+			print("Nemate vise pokusaja")
+			print(komb)
+			break
+		elif br > 1:
+			print("Imate jos {} pokusaja".format(br))
+		else:
+			print("Imate jos {} pokusaj".format(br))
 		
 if __name__ == '__main__':
 	main()
